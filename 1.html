@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>ROWS: <input type="number" id="row_txt" value></p>
+        <p>COLUMNS: <input type="number" id="col_txt" value></p>
+        <button onclick="draw_table()"> TABLE</button>
+    </div>
+    <script>
+
+        function draw_table() {
+            const user_req_rows = parseInt(document.getElementById("row_txt").value)
+            const user_req_col = parseInt(document.getElementById("col_txt").value)
+
+            document.write(`<table border=1>`)
+            for (let rows = 0; rows < user_req_rows; rows++) {
+                document.write(`<tr>`)
+                for (let columns = 0; columns < user_req_col; columns++) {
+                    document.write(`<td>${rows+1}:${columns+1}</td>`)
+                }
+                document.write(`</tr>`)
+            }
+            document.write(`</table>`)
+        }
+
+    </script>
+</body>
+</html>

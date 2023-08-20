@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showUserDetails() {
+var firstName = document.getElementById("firstName").value;
+var lastName = document.getElementById("lastName").value;
+var email = document.getElementById("email").value;
+var role = document.getElementById("role").value;
+var phone = document.getElementById("phone").value;
+var height = document.getElementById("height").value;
+var city = document.getElementById("city").value;
+var vegetarian = document.getElementById("vegetarian").checked;
+var os = "";
+var osOptions = document.getElementsByName("os");
+for (var i = 0; i < osOptions.length; i++) {
+if (osOptions[i].checked) {
+os = osOptions[i].value;
+break;
+}
+}
+var profilePicture = document.getElementById("profilePicture").value;
+
+var userDetails = "First name: " + firstName +
+"\nLast name: " + lastName +
+"\nEmail: " + email +
+"\nRole: " + role +
+"\nPhone: " + phone +
+"\nHeight: " + height +
+"\nCity: " + city +
+"\nVegetarian: " + (vegetarian ? "Yes" : "No") +
+"\nOperating System: " + os +
+"\nProfile Picture: " + profilePicture;
+
+alert(userDetails);
+}
+</script>
+</head>
+<body>
+First name: <input type="text" id="firstName"><br>
+Last name: <input type="text" id="lastName"><br>
+Email: <input type="text" id="email"><br>
+Role: <input type="text" id="role"><br>
+Phone: <input type="tel" id="phone"><br>
+Height: <input type="number" id="height"><br>
+City:
+<select id="city">
+<option value="Tel Aviv">Tel Aviv</option>
+<option value="Jerusalem">Jerusalem</option>
+<option value="Haifa">Haifa</option>
+</select><br>
+Vegetarian: <input type="checkbox" id="vegetarian"><br>
+Operating System:
+<input type="radio" name="os" value="Windows">Windows
+<input type="radio" name="os" value="Mac">Mac
+<input type="radio" name="os" value="Linux">Linux<br>
+<button onclick="showUserDetails()">Show Details</button>
+</body>
+</html>

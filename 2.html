@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>homework2</title>
+</head>
+<body>
+<p>user<input type="text" id="user_name" ></p>
+<p>password<input type="password" id= "password_name" ></p>
+<button onclick="user_napass()"> login</button>
+
+<script>
+const my_user = "chavi"
+const my_password = "123456!"
+
+function user_napass(){
+const username = document.getElementById("user_name").value
+const pwd = document.getElementById("password_name").value
+
+if (username === my_user && pwd === my_password ){
+alert("הצלחת!")
+window.location.href="https://github.com"
+}
+else {
+    alert("נסה שוב")
+}
+}
+</script>
+
+
+
+
+</body>
+</html>
